@@ -679,7 +679,7 @@
 
         <!-- Projects Section -->
         <section id="projects" class="projects-section">
-            <h2>My <span>Projects</span></h2>
+            <h2>hardware <span>Projects</span></h2>
             <div class="project-grid">
                 <div class="project-card" data-tilt data-tilt-max="10">
                     <img src="smart_irr.jpg" alt="Smart Irrigation System">
@@ -694,7 +694,24 @@
                     <a href="https://github.com/Yadavallitejas/gemini-chat-esp32" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
                 </div>
             </div>
-        </section>
+        <!-- </section>
+                <section id="projects" class="projects-section">
+            <h2>software <span>Projects</span></h2>
+            <div class="project-grid">
+                <div class="project-card" data-tilt data-tilt-max="10">
+                    <img src="smart_irr.jpg" alt="Smart Irrigation System">
+                    <h3>Electokart</h3>
+                    <p>Automated irrigation using Arduino Uno with soil moisture sensor and LCD.</p>
+                    <a href="https://github.com/Yadavallitejas/smart-irrigation-system" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+                <div class="project-card" data-tilt data-tilt-max="10">
+                    <img src="geminionesp.png" alt="Chat Assistant on ESP32">
+                    <h3>Chat Assistant on ESP32</h3>
+                    <p>Gemini Chat Assistant integrated with ESP32 microcontroller.</p>
+                    <a href="https://github.com/Yadavallitejas/gemini-chat-esp32" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+        </section> -->
 
         <!-- Skills Section -->
         <section id="skills" class="skills-section">
@@ -706,8 +723,13 @@
                     <div class="progress-bar"><div class="progress" data-done="90"></div></div>
                 </div>
                 <div class="skill">
-                    <i class="fab fa-django"></i>
+                    <i class="fab fa-python"></i>
                     <p>Django</p>
+                    <div class="progress-bar"><div class="progress" data-done="80"></div></div>
+                </div>
+                <div class="skill">
+                    <i class="fa-solid fa-database"></i>
+                    <p>sql data</p>
                     <div class="progress-bar"><div class="progress" data-done="80"></div></div>
                 </div>
                 <div class="skill">
@@ -725,6 +747,11 @@
                     <p>PCB Designing</p>
                     <div class="progress-bar"><div class="progress" data-done="75"></div></div>
                 </div>
+                <div class="skill">
+                    <i class="fa-brands fa-git-alt"></i>
+                    <p>version control</p>
+                    <div class="progress-bar"><div class="progress" data-done="80"></div></div>
+                </div>
             </div>
         </section>
 
@@ -732,6 +759,7 @@
         <section id="contact" class="contact-section">
             <h2>Contact <span>Me!</span></h2>
             <form id="contact-form" class="contact-form">
+                <input type="hidden" name="title" value="Contact Us">
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Your Name" required>
                 </div>
@@ -747,6 +775,7 @@
             <div class="social-icons">
                 <a href="https://github.com/Yadavallitejas/" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/tejas-yadavalli" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:tejasyadavalli17@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </section>
                     <button id="theme-toggle">Toggle Theme</button>
@@ -808,7 +837,7 @@
         observer.observe(document.querySelector('.skills-section'));
 
         // EmailJS Integration
-        emailjs.init("YOUR_USER_ID");
+        emailjs.init("X594MX72kY7OKJ2jv");
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             if (!this.checkValidity()) {
@@ -816,7 +845,7 @@
                 document.getElementById('form-message').style.color = 'red';
                 return;
             }
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            emailjs.sendForm('service_3scmt58', 'template_egx5sqk', this)
                 .then(() => {
                     document.getElementById('form-message').textContent = 'Message sent successfully!';
                     document.getElementById('form-message').style.color = '#4aa8ff';
@@ -824,7 +853,10 @@
                 }, (error) => {
                     document.getElementById('form-message').textContent = 'Failed to send message. Please try again.';
                     document.getElementById('form-message').style.color = 'red';
-                    console.error(error);
+                    console.error('EmailJS error:', error);
+                    if (error && error.text) {
+                        console.error('Error details:', error.text);
+                    }
                 });
         });
 
