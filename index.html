@@ -83,6 +83,23 @@
             text-shadow: 0 0 10px #4aa8ff;
         }
 
+        /* Mobile Navigation Toggle Button */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            width: 30px;
+            height: 25px;
+            justify-content: space-between;
+        }
+
+        .nav-toggle span {
+            height: 3px;
+            background: #4aa8ff;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
         /* Section Styles */
         section {
             padding: 80px 0;
@@ -575,6 +592,53 @@
             .project-grid, .certifications-grid, .skills-container {
                 grid-template-columns: 1fr;
             }
+
+            /* Mobile Navigation */
+            nav {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 60px;
+                right: 0;
+                background: rgba(11, 17, 32, 0.95);
+                height: calc(100% - 60px);
+                width: 200px;
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+                box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+                z-index: 1001;
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .nav-links a {
+                font-size: 1.3rem;
+                padding: 10px 0;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+        }
+
+        /* Nav Toggle Active State */
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
         }
     </style>
 </head>
@@ -584,6 +648,11 @@
         <!-- Navigation -->
         <nav>
             <div class="logo">TEJAS...</div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
@@ -618,7 +687,7 @@
             <h2>About <span>Me</span></h2>
             <ul class="about-list">
                 <li><i class="fas fa-bolt"></i> Adaptable and quick learner</li>
-                <li><i class="fas fa-lightbulb"></i> Passionate about real-world engineering applications</li>
+                <li><i class="fas fa-lightbulb"></i>Passionate about real-world engineering applications</li>
                 <li><i class="fas fa-rocket"></i> Innovator in embedded solutions</li>
             </ul>
         </section>
@@ -872,6 +941,26 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+            });
+        });
+    </script>
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
             });
         });
     </script>
