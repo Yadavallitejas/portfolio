@@ -621,3 +621,90 @@ footer {
         gap: 20px;
     }
 }
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.timeline-year {
+    min-width: 90px;
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.timeline-content h3 {
+    margin-bottom: 0.2rem;
+}
+
+/* Experience */
+.experience-card {
+    max-width: 700px;
+}
+
+.exp-company {
+    font-weight: 600;
+    margin-top: 0.3rem;
+}
+
+.exp-meta {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+
+.exp-points {
+    padding-left: 1.2rem;
+}
+
+.exp-points li {
+    margin-bottom: 0.6rem;
+}
+
+/* Certifications */
+.cert-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.cert-pill {
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.education-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.8rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.edu-institute {
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.edu-details {
+    margin-top: 0.4rem;
+    opacity: 0.85;
+}
+
+.edu-year {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
