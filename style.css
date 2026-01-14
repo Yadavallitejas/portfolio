@@ -705,6 +705,59 @@ footer {
 }
 
 .edu-year {
+    
     font-size: 0.9rem;
     opacity: 0.7;
+}
+
+/* Resume CTA */
+.resume-cta {
+    text-align: center;
+}
+
+.resume-box {
+    max-width: 720px;
+    margin: auto;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.03)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.resume-box p {
+    margin: 1rem 0 2rem;
+    opacity: 0.85;
+}
+
+/* Footer */
+.footer {
+    padding: 4rem 0 2rem;
+    text-align: center;
+    opacity: 0.95;
+}
+
+.contact-links {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-links a {
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+.contact-links a:hover {
+    opacity: 1;
+}
+
+.footer-note {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    opacity: 0.6;
 }
