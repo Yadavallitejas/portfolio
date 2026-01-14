@@ -1,377 +1,413 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tejas Yadavalli | Portfolio</title>
+    <title>Tejas Yadavalli | ECE & Full Stack Developer</title>
     <meta name="description"
-        content="Portfolio of Tejas Yadavalli, ECE Student and Full Stack Developer specializing in IoT, Embedded Systems, and Web Development.">
-    <!-- Fonts -->
+        content="Portfolio of Tejas Yadavalli - Electronics Engineer & Full Stack Developer specializing in IoT, AI, and Web Technologies.">
+
+    <!-- Fonts: Inter (Standard for modern tech look) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon (Placeholder) -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav>
-        <div class="container">
+    <nav class="navbar">
+        <div class="container nav-container">
             <a href="#" class="logo">TEJAS<span>.</span></a>
-            <button class="menu-btn"><i class="fas fa-bars"></i></button>
+
             <div class="nav-links">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
-                <button class="theme-toggle"><i class="fas fa-sun"></i></button>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-btn">Contact Me</a>
             </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <span class="hero-greeting">Hello, I'm</span>
-                <h1>Tejas Yadavalli</h1>
-                <p>Electronics & Communication Engineering student driven by innovation. I bridge the gap between
-                    hardware and software, building solutions in Embedded Systems, IoT, AI, and Full-Stack Web
-                    Development.</p>
-                <div class="cta-group">
-                    <a href="#projects" class="btn">View My Work</a>
-                    <a href="#contact" class="btn-outline">Contact Me</a>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content fade-in-up">
+                    <span class="badge">Available for Internships</span>
+                    <h1 class="hero-title">
+                        Building the bridge between <br>
+                        <span class="gradient-text">Hardware & Software.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        I'm <strong>Tejas Yadavalli</strong>, an Electronics & Communication Engineer specializing in
+                        Embedded Systems, IoT, AI, and Full-Stack Development.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+            <!-- Abstract Background Element -->
+            <div class="hero-glow"></div>
+        </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; color: var(--text-secondary);">
-                <p>
-                    I am an Electronics and Communication Engineering student with a strong hands-on approach to
-                    problem-solving. My expertise spans across <strong>Embedded Systems, IoT, and Artificial
-                        Intelligence</strong>, as well as <strong>Full-Stack Web Development</strong>.
-                </p>
-                <p>
-                    I am proficient in languages like <strong>Python, C, JavaScript, and SQL</strong>, and frameworks
-                    like <strong>Django</strong>. I also have practical exposure to PCB design, sensor integration, and
-                    microcontroller programming (Arduino, ESP32).
-                </p>
-                <p>
-                    I have successfully built real-world projects combining AI and IoT, such as a Gemini Chat Assistant
-                    on ESP32, as well as scalable web applications like e-commerce platforms. I am an adaptable, fast
-                    learner, always motivated to contribute to innovative engineering teams.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience & Education Section -->
-    <section id="experience">
-        <div class="container">
-            <h2>Experience & Education</h2>
-            <div class="timeline">
-
-                <!-- Internship -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">May 2024 – Nov 2024</div>
-                    <div class="timeline-content">
-                        <h3>Diploma Trainee</h3>
-                        <h4>Resolutetm Group</h4>
-                        <p>Assisted in embedded electronics development, component integration, and system testing.
-                            Worked on PCB schematics, hardware validation, and preventive maintenance. Conducted quality
-                            inspections and supported troubleshooting of electronic systems.</p>
-                    </div>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>About Me</h2>
                 </div>
-
-                <!-- Education 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Present</div>
-                    <div class="timeline-content">
-                        <h3>B.Tech in Electronics & Communication Engineering</h3>
-                        <h4>Aditya Engineering College</h4>
-                        <p>Continuing my journey in advanced electronics and communication systems.</p>
-                    </div>
-                </div>
-
-                <!-- Education 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">May 2025 (Expected)</div>
-                    <div class="timeline-content">
-                        <h3>Diploma in Electronics & Communication Engineering</h3>
-                        <h4>Aditya Engineering College</h4>
-                        <p>Average Score: 94%.<br>Relevant Coursework: Microprocessors, Digital Electronics,
-                            Communication Systems, MATLAB, C.</p>
-                    </div>
-                </div>
-
-                <!-- Education 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">May 2022</div>
-                    <div class="timeline-content">
-                        <h3>Secondary Education</h3>
-                        <h4>S P H H M High School</h4>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <i class="far fa-folder folder-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/Yadavallitejas" target="_blank" title="GitHub"><i
-                                        class="fab fa-github"></i></a>
+                <div class="about-grid fade-in">
+                    <div class="about-text">
+                        <p>
+                            I don't just write code; I build systems that interact with the real world.
+                            From designing PCB schematics to deploying scalable web applications, I thrive at the
+                            intersection of <strong>Electronics</strong> and <strong>Computer Science</strong>.
+                        </p>
+                        <p>
+                            Currently pursuing my B.Tech in ECE, I have hands-on experience building AI-integrated IoT
+                            devices and modern web platforms. I am adaptable, detail-oriented, and driven by a passion
+                            for innovation.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">4+</span>
+                                <span class="stat-label">Major Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Certifications</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">IoT</span>
+                                <span class="stat-label">Specialist</span>
                             </div>
                         </div>
-                        <h3 class="project-title">Smart Irrigation System</h3>
-                        <p>Designed an automated irrigation system using Arduino Uno with soil moisture sensors and LCD
-                            display to optimize water usage based on real-time soil data.</p>
-                        <div class="project-tech">
-                            <span>Arduino</span>
-                            <span>Sensors</span>
-                            <span>C++</span>
-                            <span>IoT</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Technical Arsenal</h2>
+                    <p>A comprehensive toolkit for full-stack and embedded engineering.</p>
+                </div>
+
+                <div class="skills-grid fade-in">
+                    <!-- Languages -->
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">C / Embedded C</span>
+                            <span class="skill-pill">JavaScript</span>
+                            <span class="skill-pill">SQL</span>
+                            <span class="skill-pill">HTML5</span>
+                            <span class="skill-pill">CSS3</span>
+                        </div>
+                    </div>
+
+                    <!-- Web & Backend -->
+                    <div class="skill-category">
+                        <h3>Web & Backend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-pill">Django</span>
+                            <span class="skill-pill">REST APIs</span>
+                            <span class="skill-pill">SQLite</span>
+                            <span class="skill-pill">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <!-- Hardware & IoT -->
+                    <div class="skill-category">
+                        <h3>Hardware & IoT</h3>
+                        <div class="skill-tags">
+                            <span class="skill-pill">Arduino</span>
+                            <span class="skill-pill">ESP32</span>
+                            <span class="skill-pill">Sensors & Actuators</span>
+                            <span class="skill-pill">PCB Design (EasyEDA)</span>
+                            <span class="skill-pill">Robotics</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools & AI -->
+                    <div class="skill-category">
+                        <h3>Tools & AI</h3>
+                        <div class="skill-tags">
+                            <span class="skill-pill">Git & GitHub</span>
+                            <span class="skill-pill">VS Code</span>
+                            <span class="skill-pill">Google Gemini API</span>
+                            <span class="skill-pill">MATLAB</span>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <i class="far fa-folder folder-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/Yadavallitejas" target="_blank" title="GitHub"><i
-                                        class="fab fa-github"></i></a>
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Selected Work</h2>
+                    <p>Engineering solutions for real-world problems.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card fade-in">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <div class="folder-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Yadavallitejas/smart-irrigation-system" target="_blank"
+                                        aria-label="GitHub Link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
+                            <h3 class="project-title">Smart Irrigation System</h3>
+                            <p class="project-desc">
+                                Automated IoT solution using Arduino and soil moisture sensors. optimizing water usage
+                                by real-time data monitoring and LCD interfacing.
+                            </p>
+                            <ul class="project-stack">
+                                <li>Arduino</li>
+                                <li>C++</li>
+                                <li>Sensors</li>
+                                <li>IoT</li>
+                            </ul>
                         </div>
-                        <h3 class="project-title">Chat Assistant on ESP32</h3>
-                        <p>Incorporated Google's Gemini API with an ESP32 microcontroller to enable real-time voice/text
-                            interaction with an LLM on embedded hardware.</p>
-                        <div class="project-tech">
-                            <span>ESP32</span>
-                            <span>Gemini API</span>
-                            <span>IoT</span>
-                            <span>Embedded C</span>
-                        </div>
-                    </div>
-                </div>
+                    </article>
 
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <i class="far fa-folder folder-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/Yadavallitejas" target="_blank" title="GitHub"><i
-                                        class="fab fa-github"></i></a>
+                    <!-- Project 2 -->
+                    <article class="project-card fade-in">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <div class="folder-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Yadavallitejas/gemini-chat-esp32" target="_blank"
+                                        aria-label="GitHub Link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
+                            <h3 class="project-title">Gemini AI Assistant (ESP32)</h3>
+                            <p class="project-desc">
+                                Integrated Google Gemini API with ESP32 to create a voice/text responsive hardware
+                                assistant, demonstrating edge-AI capabilities.
+                            </p>
+                            <ul class="project-stack">
+                                <li>ESP32</li>
+                                <li>GenAI</li>
+                                <li>Embedded C</li>
+                                <li>API</li>
+                            </ul>
                         </div>
-                        <h3 class="project-title">ElectroCart</h3>
-                        <p>A full-stack e-commerce web application. Implemented authentication, product catalog, cart,
-                            orders, and payments.</p>
-                        <div class="project-tech">
-                            <span>Django</span>
-                            <span>Python</span>
-                            <span>SQLite</span>
-                            <span>HTML/CSS</span>
-                        </div>
-                    </div>
-                </div>
+                    </article>
 
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <i class="far fa-folder folder-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/Yadavallitejas" target="_blank" title="GitHub"><i
-                                        class="fab fa-github"></i></a>
+                    <!-- Project 3 -->
+                    <article class="project-card fade-in">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <div class="folder-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" target="_blank" aria-label="GitHub Link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
+                            <h3 class="project-title">ElectroCart</h3>
+                            <p class="project-desc">
+                                Full-stack e-commerce application with product catalogs, shopping cart functionality,
+                                user authentication, and order management.
+                            </p>
+                            <ul class="project-stack">
+                                <li>Django</li>
+                                <li>Python</li>
+                                <li>SQLite</li>
+                                <li>HTML/CSS</li>
+                            </ul>
                         </div>
-                        <h3 class="project-title">Skill Seek</h3>
-                        <p>Platform connecting users with skilled workers. Allows browsing categories, booking workers,
-                            managing bookings, and chat communication.</p>
-                        <div class="project-tech">
-                            <span>Django</span>
-                            <span>Python</span>
-                            <span>Web Dev</span>
-                        </div>
-                    </div>
-                </div>
+                    </article>
 
-                <!-- Project 5 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <i class="far fa-folder folder-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/Yadavallitejas" target="_blank" title="GitHub"><i
-                                        class="fab fa-github"></i></a>
+                    <!-- Project 4 -->
+                    <article class="project-card fade-in">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <div class="folder-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" target="_blank" aria-label="GitHub Link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
+                            <h3 class="project-title">Customized Arduino PCB</h3>
+                            <p class="project-desc">
+                                Engineered a tailored Arduino clone by designing the schematic and PCB layout to meet
+                                specific size and I/O requirements.
+                            </p>
+                            <ul class="project-stack">
+                                <li>PCB Design</li>
+                                <li>EasyEDA</li>
+                                <li>Electronics</li>
+                            </ul>
                         </div>
-                        <h3 class="project-title">Customized Arduino</h3>
-                        <p>Developed a custom Arduino hardware version by designing its schematic and PCB layout to meet
-                            specific project requirements.</p>
-                        <div class="project-tech">
-                            <span>PCB Design</span>
-                            <span>EasyEDA</span>
-                            <span>Electronics</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Certs Section -->
+        <section id="experience" class="section alt-bg">
+            <div class="container container-sm">
+                <div class="section-header fade-in">
+                    <h2>Experience & Distinctions</h2>
+                    <p>My professional journey and qualifications.</p>
+                </div>
+
+                <div class="experience-timeline fade-in">
+                    <!-- Exp Item -->
+                    <div class="exp-item">
+                        <div class="exp-date">May 2024 – Nov 2024</div>
+                        <div class="exp-content">
+                            <h3>Diploma Trainee</h3>
+                            <span class="company">Resolutetm Group</span>
+                            <p>
+                                • Assisted in embedded electronics development and component integration.<br>
+                                • Validated hardware schematics and conducted quality inspections.<br>
+                                • Supported troubleshooting of complex electronic systems.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <div class="skills-wrapper">
-
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">SQL</span>
+                <!-- Certifications Badge Grid -->
+                <div class="certs-grid fade-in">
+                    <h3>Certifications</h3>
+                    <div class="cert-tags">
+                        <span class="cert-badge">Generative AI (Internshala)</span>
+                        <span class="cert-badge">Python (Cisco)</span>
+                        <span class="cert-badge">Embedded Systems (NSDC)</span>
+                        <span class="cert-badge">Intro to AI (IBM)</span>
+                        <span class="cert-badge">PCB Designing</span>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="skill-category">
-                    <h3>Web & Backend</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Django</span>
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">SQLite</span>
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container container-sm">
+                <div class="section-header fade-in">
+                    <h2>Let's build something next level</h2>
+                    <p>Open for Internships and Collaborative Projects.</p>
+                </div>
+
+                <div class="contact-box fade-in">
+                    <p class="contact-email">tejasyadavalli17@gmail.com</p>
+                    <div class="contact-buttons">
+                        <a href="mailto:tejasyadavalli17@gmail.com" class="btn btn-primary">Say Hello</a>
+                        <a href="https://github.com/Yadavallitejas" target="_blank" class="btn btn-outline">GitHub
+                            Profile</a>
+                        <a href="#" target="_blank" class="btn btn-outline">LinkedIn</a>
                     </div>
                 </div>
-
-                <div class="skill-category">
-                    <h3>Embedded & IoT</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Arduino</span>
-                        <span class="skill-tag">ESP32</span>
-                        <span class="skill-tag">Sensors</span>
-                        <span class="skill-tag">Robotics</span>
-                        <span class="skill-tag">Embedded C</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Tools & Others</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git/GitHub</span>
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">EasyEDA</span>
-                        <span class="skill-tag">MATLAB</span>
-                        <span class="skill-tag">Google Gemini API</span>
-                        <span class="skill-tag">PCB Design</span>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <div class="container">
-            <h2>Certifications</h2>
-            <div class="cert-grid">
-                <div class="cert-card">
-                    <div class="cert-issuer">IBM / Coursera</div>
-                    <h3>Introduction to Artificial Intelligence</h3>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-issuer">Meta / Coursera</div>
-                    <h3>HTML & CSS</h3>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-issuer">Internshala</div>
-                    <h3>Generative AI</h3>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-issuer">Meta</div>
-                    <h3>Programming with JavaScript</h3>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-issuer">Cisco Networking Academy</div>
-                    <h3>Python</h3>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-issuer">NSDC / Internshala</div>
-                    <h3>Embedded Systems</h3>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-issuer">NSDC / Internshala</div>
-                    <h3>PCB Designing</h3>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-issuer">Cisco / Udemy</div>
-                    <h3>Arduino & IoT</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try
-                my best to get back to you!</p>
-
-            <a href="mailto:tejasyadavalli17@gmail.com" class="btn"
-                style="margin-top: 1.5rem; display: inline-block;">Say Hello</a>
-
-            <div class="social-links">
-                <a href="https://github.com/Yadavallitejas" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:tejasyadavalli17@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-
-            <div style="margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
-                <p>Based in Gokavaram, India</p>
-                <p>+91 6305594309</p>
-            </div>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Tejas Yadavalli. All rights reserved.</p>
+            <div class="footer-content">
+                <p>&copy; 2026 Tejas Yadavalli. Built using HTML, CSS & Vanilla JS.</p>
+            </div>
         </div>
     </footer>
 

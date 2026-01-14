@@ -1,99 +1,77 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Navigation
-    const menuBtn = document.querySelector('.menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    
-    // Create close button for mobile menu if needed, or just toggle
-    // For simplicity, we toggle class
-    if (menuBtn) {
-        menuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            // Toggle icon between bars and times
-            const icon = menuBtn.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    }
 
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            const icon = menuBtn.querySelector('i');
-            if (icon) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    });
-
-    // Scroll Reveal Animation
+    // Smooth Scroll Reveal Animation
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px"
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+                observer.unobserve(entry.target); // Reveal only once
             }
         });
     }, observerOptions);
 
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        section.classList.add('fade-in-section');
-        observer.observe(section);
-    });
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach(el => observer.observe(el));
 
-    // Theme Toggle
-    const themeToggle = document.querySelector('.theme-toggle');
-    const htmlAuth = document.documentElement;
-    
-    // Check local storage
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    htmlAuth.setAttribute('data-theme', currentTheme);
-    updateThemeIcon(currentTheme);
 
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            let targetTheme = htmlAuth.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            htmlAuth.setAttribute('data-theme', targetTheme);
-            localStorage.setItem('theme', targetTheme);
-            updateThemeIcon(targetTheme);
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const body = document.body;
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+
+            // Transform hamburger to X (simple CSS transition handled via standard classes if wanted, 
+            // but for now we just toggle the menu visibility) 
+            const bars = menuToggle.querySelectorAll('.bar');
+
+            // Simple Animation for toggle button
+            if (mobileMenu.classList.contains('active')) {
+                body.style.overflow = 'hidden'; // Prevent scrolling
+                bars[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+                bars[1].style.opacity = '0';
+                bars[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+            } else {
+                body.style.overflow = '';
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            }
         });
     }
 
-    function updateThemeIcon(theme) {
-        const icon = themeToggle.querySelector('i');
-        if (theme === 'dark') {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        } else {
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-        }
-    }
-});
+    // Close mobile menu on link click
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            body.style.overflow = '';
 
-// Add extra CSS for fade-in
-const style = document.createElement('style');
-style.innerHTML = `
-    .fade-in-section {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .fade-in-section.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-`;
-document.head.appendChild(style);
+            // Reset hamburger
+            const bars = menuToggle.querySelectorAll('.bar');
+            bars[0].style.transform = 'none';
+            bars[1].style.opacity = '1';
+            bars[2].style.transform = 'none';
+        });
+    });
+
+    // Navbar Blur Effect on Scroll (Optional polish)
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(3, 3, 3, 0.95)';
+            navbar.style.boxShadow = '0 1px 0 rgba(255,255,255,0.05)';
+        } else {
+            navbar.style.background = 'rgba(3, 3, 3, 0.8)';
+            navbar.style.boxShadow = 'none';
+        }
+    });
+});
